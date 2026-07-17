@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Sign-In Test</title>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <h2>Google Sign-In Test</h2>
+  <div id="g_id_onload"
+       data-client_id="810979762675-va0doqeg2ltn0gncbjn4j6uei4138reg.apps.googleusercontent.com"
+       data-callback="handleCredentialResponse">
+  </div>
+  <div class="g_id_signin" data-type="standard"></div>
+  <p>ID Token (copy this into Postman):</p>
+  <textarea id="tokenBox" rows="10" cols="80"></textarea>
+
+  <script>
+    function handleCredentialResponse(response) {
+      document.getElementById('tokenBox').value = response.credential;
+      console.log("ID Token:", response.credential);
+    }
+  </script>
+</body>
+</html>
