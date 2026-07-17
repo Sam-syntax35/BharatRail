@@ -1,10 +1,12 @@
 import client from './client';
 
 export const searchApi = {
-  search: (fromCode, toCode, travelDate) => client.get('/search/trains', {
-    params: { from: fromCode, to: toCode, date: travelDate },
-  }),
-  autocomplete: (query) => client.get('/search/autocomplete', {
-    params: { q: query },
-  }),
+  search: (fromCode, toCode, travelDate) => {
+    const params = { from: fromCode, to: toCode };
+    if (travelDate) params.date = travelDate;
+    return client.get('/search/trains', { params }).then((res) => res.data);
+  },
+  autocomplete: (query) => {
+    return client.get('/search/autocomplete', { params: { q: query } }).then((res) => res.data);
+  },
 };

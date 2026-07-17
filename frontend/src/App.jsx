@@ -1,13 +1,33 @@
 import { useEffect } from 'react';
-import { useAuthStore } from './store/auth.store';
-import AppRouter from './router';
+import { BrowserRouter } from 'react-router-dom';
+import ErrorBoundary from './components/common/ErrorBoundary';
+import AppRoutes from './routes';
+import { useAuthStore } from './stores/auth.store';
 
 export default function App() {
-  const fetchProfile = useAuthStore((s) => s.fetchProfile);
+  const { initializeAuth, logout } = useAuthStore();
 
   useEffect(() => {
-    fetchProfile();
-  }, [fetchProfile]);
+    // Check if the user is authenticated (reads cookies) on app launch
+    initializeAuth();
 
-  return <AppRouter />;
+    // Register a global event listener to trigger client logout eviction
+    const handleGlobalLogout = () => {
+      logout();
+    };
+
+    window.addEventListener('auth:logout', handleGlobalLogout);
+
+    return () => {
+      window.removeEventListener('auth:logout', handleGlobalLogout);
+    };
+  }, [initializeAuth, logout]);
+
+  return (
+    <ErrorBoundary>
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </ErrorBoundary>
+  );
 }
