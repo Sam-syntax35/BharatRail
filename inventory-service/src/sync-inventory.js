@@ -94,4 +94,5 @@ main()
   .catch(console.error)
   .finally(async () => {
     await inventoryPrisma.$disconnect();
+    process.exit(0);
   });
