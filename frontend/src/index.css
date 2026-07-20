@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.js";
 
 @layer utilities {
   @keyframes slide-in {
@@ -26,14 +25,19 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #020617; /* slate-950 */
+  background: #f8fafc; /* neutral background (#F8FAFC) */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b; /* slate-800 */
+  background: #cbd5e1; /* slate-300 */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155; /* slate-700 */
+  background: #94a3b8; /* slate-400 */
+}
+
+body {
+  background-color: #f8fafc; /* Very light gray */
+  color: #0f172a; /* slate-900 */
 }

@@ -23,6 +23,11 @@ export const useToastStore = create((set, get) => ({
 
 export const toast = {
   success: (msg, duration) => useToastStore.getState().addToast(msg, 'success', duration),
-  error: (msg, duration) => useToastStore.getState().addToast(msg, 'error', duration),
+  error: (msg, duration) => {
+    if (msg === 'REQUEST_CANCELLED' || (msg && typeof msg === 'object' && msg.message === 'REQUEST_CANCELLED')) {
+      return;
+    }
+    useToastStore.getState().addToast(msg, 'error', duration);
+  },
   info: (msg, duration) => useToastStore.getState().addToast(msg, 'info', duration),
 };

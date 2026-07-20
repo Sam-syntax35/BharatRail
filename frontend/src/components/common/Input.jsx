@@ -1,3 +1,4 @@
+
 export default function Input({
   label,
   name,
@@ -12,7 +13,7 @@ export default function Input({
   return (
     <div className="flex flex-col gap-1.5 w-full font-sans">
       {label && (
-        <label className="text-xs font-semibold tracking-wide text-slate-400 uppercase">
+        <label className="text-xs font-bold tracking-wider text-slate-500 uppercase">
           {label}
         </label>
       )}
@@ -20,18 +21,18 @@ export default function Input({
         type={type}
         placeholder={placeholder}
         disabled={disabled}
-        className={`w-full px-4 py-3 rounded-2xl bg-slate-900/40 border text-slate-100 placeholder-slate-500 transition-all outline-none text-sm md:text-base
-          ${disabled ? 'opacity-50 cursor-not-allowed' : ''}
+        className={`w-full px-4 py-3 rounded-xl border text-slate-800 bg-white placeholder-slate-400 transition-all outline-none text-sm md:text-base
+          ${disabled ? 'bg-slate-50 text-slate-400 cursor-not-allowed' : ''}
           ${
             error
-              ? 'border-rose-500/60 focus:border-rose-500 focus:ring-1 focus:ring-rose-500'
-              : 'border-slate-800 hover:border-slate-700 focus:border-primary-500 focus:ring-1 focus:ring-primary-500'
+              ? 'border-red-500/80 focus:border-red-600 focus:ring-1 focus:ring-red-600'
+              : 'border-slate-200 hover:border-slate-300 focus:border-secondary-500 focus:ring-1 focus:ring-secondary-500 shadow-sm'
           }`}
         {...register(name, validation)}
         {...rest}
       />
       {error && (
-        <span className="text-xs font-medium text-rose-400 mt-0.5 pl-1 animate-pulse">
+        <span className="text-xs font-semibold text-red-500 mt-0.5 pl-1">
           {error.message}
         </span>
       )}

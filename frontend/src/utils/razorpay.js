@@ -26,13 +26,13 @@ export function openRazorpayCheckout({ keyId, orderId, amount, currency, booking
     amount: Math.round(amount * 100),
     currency: currency || 'INR',
     order_id: orderId,
-    name: 'IRCTC Booking',
+    name: 'BharatRail Reservation',
     description: bookingDescription || 'Train Ticket Booking',
     prefill: {
       name: user ? `${user.firstName || ''} ${user.lastName || ''}`.trim() : '',
       email: user?.email || '',
     },
-    theme: { color: '#1a237e' },
+    theme: { color: '#2563eb' }, // Matching royal blue
     handler: (response) => onSuccess(response),
     modal: { ondismiss: onDismiss },
   };

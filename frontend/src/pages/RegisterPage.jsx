@@ -38,7 +38,6 @@ export default function RegisterPage() {
         confirmPassword: data.confirmPassword
       });
       toast.success('Verification OTP code sent to your email!');
-      // Forward the user to verify OTP and pass the email address
       navigate(`/verify-otp?email=${encodeURIComponent(data.email)}`);
     } catch (err) {
       setError(err.message || 'Failed to send OTP verification email');
@@ -49,20 +48,20 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="flex-1 flex items-center justify-center min-h-[75vh] py-8 px-4 font-sans">
-      <div className="w-full max-w-md bg-slate-900/60 border border-slate-800 rounded-3xl p-6 md:p-8 shadow-2xl backdrop-blur-md">
+    <div className="flex-1 flex items-center justify-center min-h-[75vh] py-8 px-4 font-sans bg-slate-50">
+      <div className="w-full max-w-md bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-premium-lg">
         
         {/* Brand / Logo */}
         <div className="flex flex-col items-center mb-6 md:mb-8 text-center">
           <Link to="/" className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-accent-500 to-accent-600 shadow-md mb-4 hover:scale-105 transition-transform">
             <Train className="h-5 w-5 text-white" />
           </Link>
-          <h1 className="text-2xl font-bold tracking-tight text-white mb-2">Create Account</h1>
-          <p className="text-sm text-slate-400">Join BharatRail to reserve tickets instantly</p>
+          <h1 className="text-2xl font-extrabold tracking-tight text-primary-950 mb-2">Create Account</h1>
+          <p className="text-sm text-slate-500">Secure ticket bookings in minutes</p>
         </div>
 
         {error && (
-          <div className="bg-rose-950/30 border border-rose-900/50 text-rose-350 text-xs rounded-2xl px-4 py-3 mb-6">
+          <div className="bg-red-50 border border-red-200 text-red-700 text-xs rounded-2xl px-4 py-3 mb-6">
             {error}
           </div>
         )}
@@ -119,9 +118,9 @@ export default function RegisterPage() {
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-4 top-9 text-slate-550 hover:text-slate-400 transition-colors"
+              className="absolute right-4 top-10 text-slate-400 hover:text-slate-600 transition-colors"
             >
-              {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+              {showPassword ? <EyeOff className="w-4.5 h-4.5" /> : <Eye className="w-4.5 h-4.5" />}
             </button>
           </div>
 
@@ -141,16 +140,16 @@ export default function RegisterPage() {
             <button
               type="button"
               onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-              className="absolute right-4 top-9 text-slate-550 hover:text-slate-400 transition-colors"
+              className="absolute right-4 top-10 text-slate-400 hover:text-slate-600 transition-colors"
             >
-              {showConfirmPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+              {showConfirmPassword ? <EyeOff className="w-4.5 h-4.5" /> : <Eye className="w-4.5 h-4.5" />}
             </button>
           </div>
 
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-primary-600 hover:bg-primary-500 disabled:opacity-50 text-white font-semibold py-3 px-4 rounded-2xl transition-all shadow-lg hover:shadow-primary-500/20 text-sm flex items-center justify-center gap-2 mt-4"
+            className="w-full bg-secondary-600 hover:bg-secondary-700 disabled:opacity-50 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-md hover:shadow-secondary-500/20 text-sm flex items-center justify-center gap-2 mt-4 cursor-pointer"
           >
             {isLoading ? (
               <>
@@ -165,7 +164,7 @@ export default function RegisterPage() {
 
         <p className="text-center text-xs text-slate-500 mt-6 leading-relaxed">
           Already have an account?{' '}
-          <Link to="/login" className="font-semibold text-primary-400 hover:underline">
+          <Link to="/login" className="font-bold text-secondary-600 hover:underline">
             Sign In
           </Link>
         </p>

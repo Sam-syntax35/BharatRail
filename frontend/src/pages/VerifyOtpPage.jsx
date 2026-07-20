@@ -35,22 +35,22 @@ export default function VerifyOtpPage() {
   };
 
   return (
-    <div className="flex-1 flex items-center justify-center min-h-[75vh] py-8 px-4 font-sans">
-      <div className="w-full max-w-md bg-slate-900/60 border border-slate-800 rounded-3xl p-6 md:p-8 shadow-2xl backdrop-blur-md">
+    <div className="flex-1 flex items-center justify-center min-h-[75vh] py-8 px-4 font-sans bg-slate-50">
+      <div className="w-full max-w-md bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-premium-lg">
         
         {/* Verification Icon */}
         <div className="flex flex-col items-center mb-6 text-center">
-          <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-accent-500 to-accent-600 shadow-lg mb-4">
+          <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-accent-500 to-accent-600 shadow-premium mb-4">
             <MailCheck className="h-6 w-6 text-white" />
           </div>
-          <h1 className="text-2xl font-bold tracking-tight text-white mb-2">Verify Account</h1>
-          <p className="text-sm text-slate-400 max-w-xs leading-relaxed">
-            Enter the 6-digit confirmation code sent to <strong className="text-slate-200">{email || 'your email'}</strong>
+          <h1 className="text-2xl font-extrabold tracking-tight text-primary-950 mb-2">Verify Account</h1>
+          <p className="text-sm text-slate-500 max-w-xs leading-relaxed">
+            Enter the 6-digit confirmation code sent to <strong className="text-primary-900">{email || 'your email'}</strong>
           </p>
         </div>
 
         {error && (
-          <div className="bg-rose-950/30 border border-rose-900/50 text-rose-350 text-xs rounded-2xl px-4 py-3 mb-6">
+          <div className="bg-red-50 border border-red-200 text-red-700 text-xs rounded-2xl px-4 py-3 mb-6">
             {error}
           </div>
         )}
@@ -72,7 +72,7 @@ export default function VerifyOtpPage() {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-primary-600 hover:bg-primary-500 disabled:opacity-50 text-white font-semibold py-3 px-4 rounded-2xl transition-all shadow-lg hover:shadow-primary-500/20 text-sm flex items-center justify-center gap-2 mt-4"
+            className="w-full bg-secondary-600 hover:bg-secondary-700 disabled:opacity-50 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-md hover:shadow-secondary-500/20 text-sm flex items-center justify-center gap-2 mt-4 cursor-pointer"
           >
             {isLoading ? (
               <>
@@ -88,7 +88,7 @@ export default function VerifyOtpPage() {
         <div className="mt-6 flex justify-center">
           <Link
             to="/register"
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-white transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-400 hover:text-slate-650 transition-colors"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             Back to registration

@@ -7,10 +7,10 @@ export default function ProtectedRoute({ children, adminOnly = false }) {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center text-slate-100 font-sans">
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center text-slate-800 font-sans">
         <div className="flex flex-col items-center gap-4">
-          <div className="w-12 h-12 border-4 border-primary-500 border-t-transparent rounded-full animate-spin"></div>
-          <p className="text-slate-400 text-sm font-semibold tracking-wide animate-pulse">
+          <div className="w-12 h-12 border-4 border-secondary-500 border-t-transparent rounded-full animate-spin"></div>
+          <p className="text-slate-500 text-xs font-bold tracking-wider animate-pulse uppercase">
             Verifying your session...
           </p>
         </div>

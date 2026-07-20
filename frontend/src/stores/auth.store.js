@@ -8,16 +8,21 @@ export const useAuthStore = create((set) => ({
   error: null,
 
   initializeAuth: async () => {
+    if (localStorage.getItem('auth_active') !== 'true') {
+      set({ user: null, isAuthenticated: false, isLoading: false });
+      return;
+    }
     set({ isLoading: true, error: null });
     try {
       const res = await authApi.getProfile();
       if (res.success && res.data?.user) {
         set({ user: res.data.user, isAuthenticated: true });
       } else {
+        localStorage.removeItem('auth_active');
         set({ user: null, isAuthenticated: false });
       }
     } catch {
-      // 401 simply means guest/not logged in, so we don't throw an error here
+      localStorage.removeItem('auth_active');
       set({ user: null, isAuthenticated: false });
     } finally {
       set({ isLoading: false });
@@ -29,6 +34,7 @@ export const useAuthStore = create((set) => ({
     try {
       const res = await authApi.login(email, password);
       if (res.success && res.loggedInUser) {
+        localStorage.setItem('auth_active', 'true');
         set({ user: res.loggedInUser, isAuthenticated: true });
         return res;
       }
@@ -46,6 +52,7 @@ export const useAuthStore = create((set) => ({
     try {
       const res = await authApi.googleAuth(idToken);
       if (res.success && res.loggedInUser) {
+        localStorage.setItem('auth_active', 'true');
         set({ user: res.loggedInUser, isAuthenticated: true });
         return res;
       }
@@ -60,6 +67,7 @@ export const useAuthStore = create((set) => ({
 
   logout: async () => {
     set({ isLoading: true });
+    localStorage.removeItem('auth_active');
     try {
       await authApi.logout();
     } catch (err) {
