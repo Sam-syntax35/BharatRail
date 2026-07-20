@@ -1,0 +1,122 @@
+[
+  {
+    "corridorName": "Grand Trunk Route",
+    "stations": ["NDLS", "AGC", "GWL", "BPL", "ET", "NGP", "BPQ", "WL", "BZA", "GDR", "MAS"],
+    "origin": "NDLS",
+    "destination": "MAS"
+  },
+  {
+    "corridorName": "Golden Quadrilateral West (Delhi-Mumbai)",
+    "stations": ["NDLS", "KOTA", "RTM", "BRC", "ST", "KYN", "MMCT"],
+    "origin": "NDLS",
+    "destination": "MMCT"
+  },
+  {
+    "corridorName": "Golden Quadrilateral East (Delhi-Howrah)",
+    "stations": ["NDLS", "CNB", "PRYJ", "PNBE", "HWH"],
+    "origin": "NDLS",
+    "destination": "HWH"
+  },
+  {
+    "corridorName": "Konkan Railway",
+    "stations": ["CSMT", "PNVL", "RN", "MAO", "UD", "MAJN"],
+    "origin": "CSMT",
+    "destination": "MAJN"
+  },
+  {
+    "corridorName": "Malabar Coast Corridor",
+    "stations": ["MAJN", "CAN", "CLT", "SRR", "TCR", "ERS", "QLN", "TVC"],
+    "origin": "MAJN",
+    "destination": "TVC"
+  },
+  {
+    "corridorName": "Southern Trunk Corridor",
+    "stations": ["MAS", "VM", "VRI", "MDU", "TEN", "NCJ", "TVC"],
+    "origin": "MAS",
+    "destination": "TVC"
+  },
+  {
+    "corridorName": "Deccan Corridor (Mumbai-Hyderabad)",
+    "stations": ["CSMT", "PUNE", "SUR", "SC", "HYB"],
+    "origin": "CSMT",
+    "destination": "HYB"
+  },
+  {
+    "corridorName": "South Western Link",
+    "stations": ["MAS", "JTJ", "SBC", "MYS"],
+    "origin": "MAS",
+    "destination": "MYS"
+  },
+  {
+    "corridorName": "East Coast Corridor (Kolkata-Chennai)",
+    "stations": ["HWH", "KGP", "BBS", "VSKP", "BZA", "GDR", "MAS"],
+    "origin": "HWH",
+    "destination": "MAS"
+  },
+  {
+    "corridorName": "Rajasthan Desert Link",
+    "stations": ["NDLS", "RE", "JP", "AII", "JU", "BME"],
+    "origin": "NDLS",
+    "destination": "BME"
+  },
+  {
+    "corridorName": "Ganga Yamuna Corridor",
+    "stations": ["NDLS", "CNB", "LKO", "BSB"],
+    "origin": "NDLS",
+    "destination": "BSB"
+  },
+  {
+    "corridorName": "North East Frontier Route",
+    "stations": ["PNBE", "MFP", "DBG", "NJP", "GHY"],
+    "origin": "PNBE",
+    "destination": "GHY"
+  },
+  {
+    "corridorName": "Central India Link",
+    "stations": ["MMCT", "ST", "BSL", "ET", "BPL"],
+    "origin": "MMCT",
+    "destination": "BPL"
+  },
+  {
+    "corridorName": "Gujarat Rajasthan Link",
+    "stations": ["ADI", "FL", "JP"],
+    "origin": "ADI",
+    "destination": "JP"
+  },
+  {
+    "corridorName": "Shivalik foothills Corridor",
+    "stations": ["NDLS", "UMB", "HW", "DDN"],
+    "origin": "NDLS",
+    "destination": "DDN"
+  },
+  {
+    "corridorName": "Punjab Mail Link",
+    "stations": ["NDLS", "UMB", "CDG", "ASR"],
+    "origin": "NDLS",
+    "destination": "ASR"
+  },
+  {
+    "corridorName": "Jammu Tawi Mail Route",
+    "stations": ["NDLS", "UMB", "CDG", "JAT"],
+    "origin": "NDLS",
+    "destination": "JAT"
+  },
+  {
+    "corridorName": "Chhota Nagpur Link",
+    "stations": ["HWH", "KGP", "TATA", "RNC"],
+    "origin": "HWH",
+    "destination": "RNC"
+  },
+  {
+    "corridorName": "Coal India Link",
+    "stations": ["DHN", "RNC"],
+    "origin": "DHN",
+    "destination": "RNC"
+  },
+  {
+    "corridorName": "Varanasi Patna Expressway",
+    "stations": ["BSB", "PNBE"],
+    "origin": "BSB",
+    "destination": "PNBE"
+  }
+]

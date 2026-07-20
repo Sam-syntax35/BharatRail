@@ -1,0 +1,1402 @@
+[
+  {
+    "trainNumber": "12201",
+    "trainName": "Bhopal - Mumbai Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "12502",
+    "trainName": "Surat - Agra Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "12003",
+    "trainName": "Varanasi - Nagpur Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "12904",
+    "trainName": "Pune - Jaipur Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "11005",
+    "trainName": "Pune - Hyderabad Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "51106",
+    "trainName": "Ahmedabad - Patna Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "51107",
+    "trainName": "Lucknow - Jaipur Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "64008",
+    "trainName": "Lucknow - Patna MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "12109",
+    "trainName": "Surat - Mumbai Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "51110",
+    "trainName": "Pune - Hyderabad Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "12911",
+    "trainName": "Mumbai - Nagpur Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "12512",
+    "trainName": "Mumbai - Surat Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "12113",
+    "trainName": "Surat - Delhi Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "12114",
+    "trainName": "Mumbai - Agra Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "51115",
+    "trainName": "Bengaluru - Hyderabad Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "12516",
+    "trainName": "Mumbai - Chennai Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "12917",
+    "trainName": "Ahmedabad - Nagpur Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "12118",
+    "trainName": "Patna - Agra Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "12219",
+    "trainName": "Pune - Agra Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "22420",
+    "trainName": "Delhi - Kolkata Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  },
+  {
+    "trainNumber": "12321",
+    "trainName": "Bhopal - Varanasi Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "12122",
+    "trainName": "Ahmedabad - Kolkata Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "11023",
+    "trainName": "Surat - Ahmedabad Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "22424",
+    "trainName": "Surat - Indore Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  },
+  {
+    "trainNumber": "12225",
+    "trainName": "Lucknow - Pune Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "12326",
+    "trainName": "Agra - Bhopal Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "12027",
+    "trainName": "Bengaluru - Kanpur Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "11028",
+    "trainName": "Kanpur - Ahmedabad Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "12929",
+    "trainName": "Ahmedabad - Delhi Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "12230",
+    "trainName": "Surat - Lucknow Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "12231",
+    "trainName": "Bengaluru - Hyderabad Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "12932",
+    "trainName": "Patna - Chennai Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "12333",
+    "trainName": "Jaipur - Mumbai Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "11034",
+    "trainName": "Varanasi - Nagpur Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "11035",
+    "trainName": "Kanpur - Pune Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "12136",
+    "trainName": "Surat - Bengaluru Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "12337",
+    "trainName": "Hyderabad - Jaipur Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "22438",
+    "trainName": "Indore - Delhi Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  },
+  {
+    "trainNumber": "12339",
+    "trainName": "Delhi - Bengaluru Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "64040",
+    "trainName": "Bengaluru - Lucknow MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "12241",
+    "trainName": "Ahmedabad - Nagpur Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "11042",
+    "trainName": "Hyderabad - Kolkata Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "12543",
+    "trainName": "Jaipur - Agra Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "12144",
+    "trainName": "Pune - Hyderabad Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "51145",
+    "trainName": "Lucknow - Bengaluru Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "51146",
+    "trainName": "Nagpur - Hyderabad Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "22447",
+    "trainName": "Agra - Jaipur Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  },
+  {
+    "trainNumber": "51148",
+    "trainName": "Bengaluru - Agra Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "12049",
+    "trainName": "Patna - Nagpur Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "51150",
+    "trainName": "Surat - Indore Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "12551",
+    "trainName": "Mumbai - Delhi Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "12152",
+    "trainName": "Lucknow - Varanasi Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "12153",
+    "trainName": "Mumbai - Varanasi Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "51154",
+    "trainName": "Agra - Bhopal Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "51155",
+    "trainName": "Kolkata - Nagpur Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "12356",
+    "trainName": "Nagpur - Mumbai Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "12157",
+    "trainName": "Lucknow - Bhopal Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "12358",
+    "trainName": "Agra - Indore Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "51159",
+    "trainName": "Kolkata - Indore Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "12060",
+    "trainName": "Bengaluru - Kanpur Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "12061",
+    "trainName": "Kanpur - Jaipur Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "12062",
+    "trainName": "Agra - Nagpur Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "12063",
+    "trainName": "Surat - Varanasi Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "11064",
+    "trainName": "Surat - Ahmedabad Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "22465",
+    "trainName": "Lucknow - Ahmedabad Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  },
+  {
+    "trainNumber": "11066",
+    "trainName": "Surat - Chennai Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "51167",
+    "trainName": "Varanasi - Agra Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "12368",
+    "trainName": "Bengaluru - Surat Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "64069",
+    "trainName": "Chennai - Lucknow MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "51170",
+    "trainName": "Surat - Jaipur Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "12071",
+    "trainName": "Patna - Surat Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "12172",
+    "trainName": "Mumbai - Kolkata Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "22473",
+    "trainName": "Agra - Lucknow Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  },
+  {
+    "trainNumber": "12974",
+    "trainName": "Bhopal - Patna Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "64075",
+    "trainName": "Delhi - Bengaluru MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "51176",
+    "trainName": "Agra - Jaipur Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "12377",
+    "trainName": "Jaipur - Indore Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "11078",
+    "trainName": "Chennai - Indore Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "12379",
+    "trainName": "Surat - Kanpur Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "11080",
+    "trainName": "Hyderabad - Chennai Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "12081",
+    "trainName": "Hyderabad - Pune Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "11082",
+    "trainName": "Surat - Delhi Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "12383",
+    "trainName": "Indore - Bengaluru Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "11084",
+    "trainName": "Delhi - Bhopal Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "12285",
+    "trainName": "Agra - Mumbai Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "12986",
+    "trainName": "Chennai - Bhopal Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "22487",
+    "trainName": "Lucknow - Kolkata Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  },
+  {
+    "trainNumber": "12188",
+    "trainName": "Pune - Bhopal Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "12589",
+    "trainName": "Varanasi - Mumbai Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "12590",
+    "trainName": "Agra - Bhopal Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "22491",
+    "trainName": "Hyderabad - Chennai Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  },
+  {
+    "trainNumber": "12292",
+    "trainName": "Pune - Nagpur Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "11093",
+    "trainName": "Kolkata - Chennai Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "12194",
+    "trainName": "Hyderabad - Pune Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "11095",
+    "trainName": "Kolkata - Mumbai Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "12196",
+    "trainName": "Hyderabad - Mumbai Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "12297",
+    "trainName": "Lucknow - Mumbai Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "12598",
+    "trainName": "Agra - Kanpur Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "64099",
+    "trainName": "Nagpur - Jaipur MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "511100",
+    "trainName": "Ahmedabad - Hyderabad Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "640101",
+    "trainName": "Nagpur - Jaipur MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "122102",
+    "trainName": "Jaipur - Ahmedabad Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "640103",
+    "trainName": "Patna - Nagpur MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "120104",
+    "trainName": "Lucknow - Agra Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "110105",
+    "trainName": "Kolkata - Patna Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "129106",
+    "trainName": "Surat - Delhi Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "123107",
+    "trainName": "Ahmedabad - Bhopal Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "121108",
+    "trainName": "Varanasi - Surat Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "125109",
+    "trainName": "Delhi - Chennai Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "511110",
+    "trainName": "Bhopal - Kanpur Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "125111",
+    "trainName": "Chennai - Mumbai Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "123112",
+    "trainName": "Kanpur - Bengaluru Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "640113",
+    "trainName": "Kolkata - Jaipur MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "511114",
+    "trainName": "Nagpur - Pune Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "129115",
+    "trainName": "Patna - Bhopal Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "120116",
+    "trainName": "Varanasi - Surat Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "224117",
+    "trainName": "Jaipur - Lucknow Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  },
+  {
+    "trainNumber": "123118",
+    "trainName": "Patna - Kanpur Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "511119",
+    "trainName": "Kanpur - Bhopal Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "224120",
+    "trainName": "Agra - Hyderabad Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  },
+  {
+    "trainNumber": "224121",
+    "trainName": "Pune - Surat Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  },
+  {
+    "trainNumber": "129122",
+    "trainName": "Varanasi - Hyderabad Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "224123",
+    "trainName": "Agra - Delhi Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  },
+  {
+    "trainNumber": "122124",
+    "trainName": "Nagpur - Pune Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "224125",
+    "trainName": "Indore - Surat Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  },
+  {
+    "trainNumber": "224126",
+    "trainName": "Pune - Varanasi Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  },
+  {
+    "trainNumber": "125127",
+    "trainName": "Jaipur - Chennai Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "122128",
+    "trainName": "Pune - Surat Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "125129",
+    "trainName": "Surat - Agra Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "120130",
+    "trainName": "Chennai - Indore Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "120131",
+    "trainName": "Pune - Bengaluru Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "120132",
+    "trainName": "Chennai - Patna Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "123133",
+    "trainName": "Bhopal - Jaipur Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "110134",
+    "trainName": "Hyderabad - Delhi Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "129135",
+    "trainName": "Varanasi - Kanpur Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "224136",
+    "trainName": "Nagpur - Pune Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  },
+  {
+    "trainNumber": "129137",
+    "trainName": "Varanasi - Surat Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "511138",
+    "trainName": "Varanasi - Agra Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "511139",
+    "trainName": "Lucknow - Surat Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "640140",
+    "trainName": "Delhi - Kolkata MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "120141",
+    "trainName": "Jaipur - Delhi Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "511142",
+    "trainName": "Indore - Ahmedabad Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "640143",
+    "trainName": "Hyderabad - Pune MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "511144",
+    "trainName": "Kanpur - Chennai Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "122145",
+    "trainName": "Chennai - Pune Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "511146",
+    "trainName": "Jaipur - Indore Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "129147",
+    "trainName": "Lucknow - Indore Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "640148",
+    "trainName": "Agra - Mumbai MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "120149",
+    "trainName": "Indore - Hyderabad Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "123150",
+    "trainName": "Kolkata - Agra Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "123151",
+    "trainName": "Kanpur - Agra Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "110152",
+    "trainName": "Hyderabad - Delhi Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "110153",
+    "trainName": "Lucknow - Nagpur Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "120154",
+    "trainName": "Pune - Indore Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "125155",
+    "trainName": "Chennai - Kolkata Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "125156",
+    "trainName": "Patna - Ahmedabad Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "123157",
+    "trainName": "Mumbai - Indore Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "129158",
+    "trainName": "Bhopal - Varanasi Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "121159",
+    "trainName": "Kolkata - Mumbai Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "640160",
+    "trainName": "Varanasi - Bengaluru MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "129161",
+    "trainName": "Hyderabad - Nagpur Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "123162",
+    "trainName": "Jaipur - Pune Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "120163",
+    "trainName": "Indore - Jaipur Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "511164",
+    "trainName": "Delhi - Bengaluru Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "511165",
+    "trainName": "Kanpur - Hyderabad Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "125166",
+    "trainName": "Jaipur - Chennai Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "121167",
+    "trainName": "Hyderabad - Kanpur Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "122168",
+    "trainName": "Agra - Jaipur Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "123169",
+    "trainName": "Delhi - Varanasi Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "125170",
+    "trainName": "Delhi - Lucknow Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "123171",
+    "trainName": "Jaipur - Indore Rajdhani Express",
+    "coachName": "AC",
+    "totalSeats": 60,
+    "basePrice": 2200
+  },
+  {
+    "trainNumber": "110172",
+    "trainName": "Kanpur - Pune Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "122173",
+    "trainName": "Varanasi - Hyderabad Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "224174",
+    "trainName": "Hyderabad - Delhi Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  },
+  {
+    "trainNumber": "110175",
+    "trainName": "Mumbai - Kolkata Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "129176",
+    "trainName": "Mumbai - Indore Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "640177",
+    "trainName": "Lucknow - Nagpur MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "120178",
+    "trainName": "Jaipur - Ahmedabad Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "640179",
+    "trainName": "Mumbai - Agra MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "121180",
+    "trainName": "Lucknow - Delhi Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "640181",
+    "trainName": "Varanasi - Bhopal MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "640182",
+    "trainName": "Ahmedabad - Lucknow MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "122183",
+    "trainName": "Kolkata - Ahmedabad Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "121184",
+    "trainName": "Jaipur - Patna Intercity Express",
+    "coachName": "Second Sitting",
+    "totalSeats": 80,
+    "basePrice": 220
+  },
+  {
+    "trainNumber": "511185",
+    "trainName": "Kanpur - Delhi Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "122186",
+    "trainName": "Kanpur - Lucknow Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "640187",
+    "trainName": "Varanasi - Indore MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "110188",
+    "trainName": "Ahmedabad - Bhopal Mail Express",
+    "coachName": "General",
+    "totalSeats": 90,
+    "basePrice": 80
+  },
+  {
+    "trainNumber": "120189",
+    "trainName": "Bengaluru - Varanasi Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "120190",
+    "trainName": "Chennai - Kolkata Shatabdi Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 850
+  },
+  {
+    "trainNumber": "129191",
+    "trainName": "Mumbai - Ahmedabad Garib Rath Express",
+    "coachName": "AC",
+    "totalSeats": 78,
+    "basePrice": 950
+  },
+  {
+    "trainNumber": "511192",
+    "trainName": "Ahmedabad - Pune Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "640193",
+    "trainName": "Mumbai - Agra MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "511194",
+    "trainName": "Bhopal - Kolkata Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "122195",
+    "trainName": "Delhi - Bengaluru Duronto Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 480
+  },
+  {
+    "trainNumber": "125196",
+    "trainName": "Nagpur - Surat Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "125197",
+    "trainName": "Agra - Hyderabad Superfast Express",
+    "coachName": "Sleeper",
+    "totalSeats": 72,
+    "basePrice": 380
+  },
+  {
+    "trainNumber": "640198",
+    "trainName": "Chennai - Patna MEMU",
+    "coachName": "General",
+    "totalSeats": 100,
+    "basePrice": 40
+  },
+  {
+    "trainNumber": "511199",
+    "trainName": "Kolkata - Pune Passenger",
+    "coachName": "General",
+    "totalSeats": 80,
+    "basePrice": 50
+  },
+  {
+    "trainNumber": "224200",
+    "trainName": "Agra - Lucknow Vande Bharat Express",
+    "coachName": "Chair Car",
+    "totalSeats": 50,
+    "basePrice": 1450
+  }
+]
