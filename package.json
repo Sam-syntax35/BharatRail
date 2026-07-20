@@ -1,0 +1,16 @@
+{
+  "name": "bharatrail-seeder",
+  "version": "1.0.0",
+  "description": "Seeder workspace for BharatRail",
+  "scripts": {
+    "seed": "node scripts/seed/index.js",
+    "seed:users": "node scripts/seed/users/seed-users.js",
+    "seed:stations": "node scripts/seed/stations/seed-stations.js",
+    "seed:trains": "node scripts/seed/trains/seed-trains.js",
+    "seed:routes": "node scripts/seed/routes/seed-routes.js",
+    "seed:schedules": "node scripts/seed/schedules/seed-schedules.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
