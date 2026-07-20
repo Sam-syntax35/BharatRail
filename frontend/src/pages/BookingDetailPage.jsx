@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useBookingPolling } from '../hooks/useBookingPolling';
 import { bookingApi } from '../api/booking.api';
 import { toast } from '../stores/toast.store';
-import { formatDate, formatDateTime, formatCurrency, formatSeatType } from '../utils/format';
+import { formatDate, formatDateTime, formatCurrency, formatSeatType, formatPNR } from '../utils/format';
 import { Train, Printer, ChevronRight, XCircle, HelpCircle } from 'lucide-react';
 
 export default function BookingDetailPage() {
@@ -144,7 +144,7 @@ export default function BookingDetailPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-semibold text-slate-650 mt-6 pt-5 border-t border-slate-50">
               <div>
                 <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0.5">PNR</p>
-                <span className="text-sm font-black text-slate-800 font-mono">{booking.pnr || '—'}</span>
+                <span className="text-sm font-black text-slate-800 font-mono">{formatPNR(booking.id)}</span>
               </div>
               <div>
                 <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-0.5">Booking Status</p>
@@ -252,7 +252,7 @@ export default function BookingDetailPage() {
                 Help & Enquiries
               </h4>
               <p className="text-[10px] text-slate-500 leading-relaxed">
-                For seat adjustment requests or timeline updates, contact the help desk quoting PNR {booking.pnr || booking.id}.
+                For seat adjustment requests or timeline updates, contact the help desk quoting PNR {formatPNR(booking.id)}.
               </p>
             </div>
           </div>

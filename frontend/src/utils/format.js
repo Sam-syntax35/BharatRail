@@ -54,3 +54,16 @@ export function formatTime(timeStr) {
   if (!timeStr) return '—';
   return timeStr;
 }
+
+export function formatPNR(id) {
+  if (!id) return '—';
+  let hash = 0;
+  for (let i = 0; i < id.length; i++) {
+    const char = id.charCodeAt(i);
+    hash = (hash << 5) - hash + char;
+    hash |= 0;
+  }
+  const positiveHash = Math.abs(hash);
+  // Indian Railway PNRs are 10 digits, typically starting with 4, 6, 8, etc.
+  return (4100000000 + (positiveHash % 5900000000)).toString();
+}

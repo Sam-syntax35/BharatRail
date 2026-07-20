@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { bookingApi } from '../api/booking.api';
 import { toast } from '../stores/toast.store';
-import { formatDate, formatCurrency } from '../utils/format';
+import { formatDate, formatCurrency, formatPNR } from '../utils/format';
 import { Ticket, Calendar, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function MyBookingsPage() {
@@ -112,7 +112,7 @@ export default function MyBookingsPage() {
                     <span className="text-xs font-bold text-slate-400 font-mono">#{b.trainNumber}</span>
                   </div>
                   <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 font-semibold">
-                    <span>PNR: <strong className="text-slate-700 font-bold">{b.pnr}</strong></span>
+                    <span>PNR: <strong className="text-slate-700 font-bold">{formatPNR(b.id)}</strong></span>
                     <span>•</span>
                     <span className="inline-flex items-center gap-1.5">
                       <Calendar className="w-3.5 h-3.5 text-slate-400" />

@@ -4,7 +4,7 @@ import { useAuthStore } from '../stores/auth.store';
 import { useSearchStore } from '../stores/search.store';
 import { bookingApi } from '../api/booking.api';
 import SearchForm from '../components/search/SearchForm';
-import { formatDate } from '../utils/format';
+import { formatDate, formatPNR } from '../utils/format';
 import { ShieldCheck, Award, Zap, ArrowRight, Calendar } from 'lucide-react';
 
 export default function HomePage() {
@@ -199,7 +199,7 @@ export default function HomePage() {
                       <span className="text-xs text-slate-400 font-semibold">#{b.trainNumber}</span>
                     </div>
                     <div className="flex items-center gap-3 text-xs text-slate-500 font-semibold">
-                      <span>PNR: {b.pnr}</span>
+                      <span>PNR: {formatPNR(b.id)}</span>
                       <span>•</span>
                       <span className="inline-flex items-center gap-1">
                         <Calendar className="w-3 h-3 text-slate-400" />
