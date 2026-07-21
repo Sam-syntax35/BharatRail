@@ -2,7 +2,12 @@ const { Client } = require('@elastic/elasticsearch');
 const { config } = require('.');
 const logger = require('./logger');
 
-const esClient = new Client({ node: config.ELASTICSEARCH_URL });
+const esClient = new Client({
+     node: config.ELASTICSEARCH_URL,
+     auth: {
+          apiKey: config.ELASTICSEARCH_API_KEY,
+     },
+});
 
 const STATION_INDEX = 'stations';
 const TRAIN_INDEX = 'trains';

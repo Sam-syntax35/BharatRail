@@ -12,8 +12,14 @@ class EmailConsumer {
                logger.info('Email consumer connected to Kafka');
 
                await consumer.subscribe({
-                    topics: Object.values(KAFKA_TOPICS),
-                    fromBeginning: false
+                    topics: [
+                         KAFKA_TOPICS.OTP_EMAIL,
+                         KAFKA_TOPICS.WELCOME_EMAIL,
+                         KAFKA_TOPICS.BOOKING_CONFIRMED,
+                         KAFKA_TOPICS.BOOKING_FAILED,
+                         KAFKA_TOPICS.BOOKING_CANCELLED,
+                    ],
+                    fromBeginning: false,
                });
 
                await consumer.run({

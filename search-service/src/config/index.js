@@ -4,8 +4,12 @@ const config = {
      NODE_ENV: process.env.NODE_ENV || "development",
      LOG_LEVEL: process.env.LOG_LEVEL || "info",
      ELASTICSEARCH_URL: process.env.ELASTICSEARCH_URL,
+     ELASTICSEARCH_API_KEY: process.env.ELASTICSEARCH_API_KEY,
      KAFKA_BROKER: process.env.KAFKA_BROKER,
      KAFKA_CLIENT_ID: process.env.KAFKA_CLIENT_ID,
+     KAFKA_USERNAME: process.env.KAFKA_USERNAME,
+     KAFKA_PASSWORD: process.env.KAFKA_PASSWORD,
+     KAFKA_SSL: process.env.KAFKA_SSL,
      ALLOWED_ORIGINS: process.env.ALLOWED_ORIGINS,
      ES_RECREATE_INDICES: process.env.ES_RECREATE_INDICES === 'true',
 };

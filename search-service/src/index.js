@@ -30,8 +30,8 @@ app.use(errorHandler);
 
 async function start() {
      try {
-          const health = await esClient.cluster.health();
-          logger.info(`Connected to Elasticsearch, cluster status: ${health.status}`);
+          await esClient.info();
+          logger.info('Connected to Elasticsearch Serverless');
 
           if (config.ES_RECREATE_INDICES) {
                await recreateIndices();

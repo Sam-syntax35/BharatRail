@@ -2,10 +2,27 @@ const { Kafka, logLevel } = require('kafkajs');
 const logger = require('./logger');
 const { config } = require('.');
 
+
+console.log("Broker:", config.KAFKA_BROKER);
+console.log("SSL:", config.KAFKA_SSL);
+console.log("Username:", config.KAFKA_USERNAME);
+console.log("Password Length:", config.KAFKA_PASSWORD?.length);
+
 const kafka = new Kafka({
+
      clientId: config.KAFKA_CLIENT_ID,
-     brokers: [config.KAFKA_BROKER || 'localhost:9093'],
+     brokers: [config.KAFKA_BROKER],
+
+     ssl: config.KAFKA_SSL === "true",
+
+     sasl: {
+          mechanism: "scram-sha-256",
+          username: config.KAFKA_USERNAME,
+          password: config.KAFKA_PASSWORD,
+     },
+
      logLevel: logLevel.ERROR,
+
      retry: {
           initialRetryTime: 300,
           retries: 8,

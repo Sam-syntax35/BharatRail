@@ -8,7 +8,10 @@ const cookieParser = require('cookie-parser');
 const { corsMiddleware } = require('./middlewares/cors.middleware');
 const errorHandler = require('./middlewares/error.middleware');
 const { reqLogger } = require('./middlewares/req.middleware');
-const { disconnectProducer } = require('./config/kafka');
+const {
+     connectProducer,
+     disconnectProducer,
+} = require('./config/kafka');
 
 const prisma = require('./config/prisma');
 const paymentRoutes = require('./routes/payment.route');
@@ -50,6 +53,7 @@ app.use(errorHandler);
 
 const startServer = async () => {
      try {
+          await connectProducer();
           const server = app.listen(config.PORT, () => {
                logger.info(`${config.SERVICE_NAME} is running on port ${config.PORT}`);
           });
