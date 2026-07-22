@@ -4,11 +4,12 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "generate": "prisma generate",
+    "migrate": "prisma migrate deploy"
   },
   "type": "commonjs",
   "dependencies": {
-    "@elastic/elasticsearch": "^9.4.2",
     "@prisma/adapter-pg": "^7.4.1",
     "@prisma/client": "^7.4.1",
     "cookie-parser": "^1.4.7",
