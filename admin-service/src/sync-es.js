@@ -1,5 +1,6 @@
 require('dotenv').config();
 const prisma = require('./config/prisma');
+const { esClient } = require('./config/elasticsearch');
 
 async function syncToElasticsearch() {
   console.log('--- STARTING DATABASE SYNC TO ELASTICSEARCH ---');
@@ -7,7 +8,7 @@ async function syncToElasticsearch() {
   // 1. Sync Stations
   const stations = await prisma.station.findMany();
   console.log(`Found ${stations.length} stations in PostgreSQL. Syncing...`);
-  
+
   for (const station of stations) {
     const doc = {
       stationId: station.id,
@@ -20,17 +21,17 @@ async function syncToElasticsearch() {
       }
     };
 
-    const res = await fetch(`http://localhost:9200/stations/_doc/${station.id}?refresh=true`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(doc)
-    });
-    
-    if (res.ok) {
+    try {
+      await esClient.index({
+        index: 'stations',
+        id: String(station.id),
+        document: doc,
+        refresh: true,
+      });
+
       console.log(`Indexed Station: ${station.name} (${station.code})`);
-    } else {
-      const errText = await res.text();
-      console.error(`Failed to index Station ${station.name}:`, errText);
+    } catch (err) {
+      console.error(`Failed to index Station ${station.name}:`, err.message);
     }
   }
 
@@ -88,17 +89,17 @@ async function syncToElasticsearch() {
       seatSummary
     };
 
-    const res = await fetch(`http://localhost:9200/trains/_doc/${train.id}?refresh=true`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(doc)
-    });
+    try {
+      await esClient.index({
+        index: 'trains',
+        id: String(train.id),
+        document: doc,
+        refresh: true,
+      });
 
-    if (res.ok) {
       console.log(`Indexed Train: ${train.trainNumber} — ${train.trainName}`);
-    } else {
-      const errText = await res.text();
-      console.error(`Failed to index Train ${train.trainNumber}:`, errText);
+    } catch (err) {
+      console.error(`Failed to index Train ${train.trainNumber}:`, err.message);
     }
   }
 
