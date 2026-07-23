@@ -1,3 +1,4 @@
+process.env.SEED_MODE = 'true';
 const { execSync } = require('child_process');
 const path = require('path');
 const seedStations = require('./stations/seed-stations');
@@ -13,32 +14,36 @@ async function main() {
   await seedRoutes();
   await seedSchedules();
 
-  console.log('--- STARTING MANIFEST SYNCHRONIZATION ORCHESTRATION ---');
+  console.log('\n======================================');
+  console.log('🔄 STARTING POST-SEED SYNCHRONIZATION');
+  console.log('======================================');
+
   try {
-    console.log('✔ Syncing Elasticsearch');
+    console.log('\n🔍 Synchronizing Elasticsearch...');
     execSync('node src/sync-es.js', {
       cwd: path.resolve(__dirname, '../../admin-service'),
-      stdio: 'ignore',
+      stdio: 'inherit',
       env: { ...process.env, DATABASE_URL: undefined }
     });
-    console.log('✔ Indexed stations');
-    console.log('✔ Indexed routes');
-    console.log('✔ Indexed schedules');
-    
-    console.log('✔ Syncing Inventory');
+    console.log('✅ Elasticsearch synchronization completed.');
+
+    console.log('\n🎫 Initializing Inventory...');
     execSync('node src/sync-inventory.js', {
       cwd: path.resolve(__dirname, '../../inventory-service'),
-      stdio: 'ignore',
+      stdio: 'inherit',
       env: { ...process.env, DATABASE_URL: undefined }
     });
-    console.log('✔ Created ScheduleInventory');
-    console.log('✔ Created SeatInventory');
-    console.log('✔ Synchronization complete');
+    console.log('✅ Inventory synchronization completed.');
+    console.log('\n🎉 All synchronization completed successfully.');
   } catch (err) {
-    console.error('❌ Orchestration synchronization failed:', err.message);
+    console.error('\n❌ Synchronization failed.');
+    console.error(err.message);
+    throw err;
   }
 
-  console.log('=== BHARATRAIL DATABASE SEEDING COMPLETED ===');
+  console.log('\n======================================');
+  console.log('✅ BHARATRAIL DATABASE SEEDING COMPLETE');
+  console.log('======================================');
 }
 
 main()

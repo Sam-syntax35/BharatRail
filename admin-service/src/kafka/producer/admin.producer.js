@@ -12,9 +12,18 @@ class AdminProducer {
           }
      }
 
+
+
      async sendMessage(topic, key, value) {
+          // Skip Kafka publishing during database seeding
+          if (process.env.SEED_MODE === 'true') {
+               logger.info(`Skipping Kafka event during seed: ${topic}`);
+               return;
+          }
+
           try {
                await this.initialize();
+
                const result = await producer.send({
                     topic,
                     messages: [{
@@ -23,11 +32,13 @@ class AdminProducer {
                          timestamp: Date.now().toString(),
                     }],
                });
+
                logger.info(`Message sent to topic: ${topic}`, {
                     key,
                     partition: result[0].partition,
                     offset: result[0].offset,
                });
+
                return result;
           } catch (error) {
                logger.error(`Failed to send message to topic: ${topic}`, {
@@ -45,36 +56,36 @@ class AdminProducer {
                { eventType: 'STATION_CREATED', data: station, timestamp: new Date().toISOString() }
           );
      }
-    async publishTrainCreated(trainData) {
-     return this.sendMessage(
-          KAFKA_TOPICS.TRAIN_CREATED,
-          `train-${trainData.id}`,
-          trainData
-     );
-}
+     async publishTrainCreated(trainData) {
+          return this.sendMessage(
+               KAFKA_TOPICS.TRAIN_CREATED,
+               `train-${trainData.id}`,
+               trainData
+          );
+     }
 
-async publishRouteCreated(routeData) {
-     return this.sendMessage(
-          KAFKA_TOPICS.ROUTE_CREATED,
-          `route-${routeData.id}`,
-          routeData
-     );
-} 
-async publishScheduleCreated(scheduleData) {
-     return this.sendMessage(
-          KAFKA_TOPICS.SCHEDULE_CREATED,
-          `schedule-${scheduleData.scheduleId}`,
-          scheduleData
-     );
-}
+     async publishRouteCreated(routeData) {
+          return this.sendMessage(
+               KAFKA_TOPICS.ROUTE_CREATED,
+               `route-${routeData.id}`,
+               routeData
+          );
+     }
+     async publishScheduleCreated(scheduleData) {
+          return this.sendMessage(
+               KAFKA_TOPICS.SCHEDULE_CREATED,
+               `schedule-${scheduleData.scheduleId}`,
+               scheduleData
+          );
+     }
 
-async publishScheduleCancelled(schedule) {
-     return this.sendMessage(
-          KAFKA_TOPICS.SCHEDULE_CANCELLED,
-          `schedule-${schedule.id}`,
-          { eventType: 'SCHEDULE_CANCELLED', data: schedule, timestamp: new Date().toISOString() }
-     );
-}
+     async publishScheduleCancelled(schedule) {
+          return this.sendMessage(
+               KAFKA_TOPICS.SCHEDULE_CANCELLED,
+               `schedule-${schedule.id}`,
+               { eventType: 'SCHEDULE_CANCELLED', data: schedule, timestamp: new Date().toISOString() }
+          );
+     }
 }
 
 module.exports = new AdminProducer();

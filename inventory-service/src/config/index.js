@@ -8,7 +8,8 @@ const config = {
      KAFKA_USERNAME: process.env.KAFKA_USERNAME,
      KAFKA_PASSWORD: process.env.KAFKA_PASSWORD,
      KAFKA_SSL: process.env.KAFKA_SSL,
-     DATABASE_URL: process.env.DATABASE_URL,
+     DATABASE_URL:
+          process.env.INVENTORY_DATABASE_URL || process.env.DATABASE_URL,
      ALLOWED_ORIGINS: process.env.ALLOWED_ORIGINS,
      LOCK_TTL_SECONDS: parseInt(process.env.LOCK_TTL_SECONDS || '300', 10),
      LOCK_EXPIRY_INTERVAL_MS: parseInt(process.env.LOCK_EXPIRY_INTERVAL_MS || '60000', 10),

@@ -6,30 +6,22 @@ datasource db {
   provider = "postgresql"
 }
 
-enum SeatStatus {
-  AVAILABLE
-  LOCKED
-  BOOKED
-  CANCELLED
-}
-
 model ScheduleInventory {
-  id            String   @id @default(uuid())
-  scheduleId    String   @unique
+  id            String          @id @default(uuid())
+  scheduleId    String          @unique
   trainId       String
   trainNumber   String
   trainName     String
-  departureDate DateTime @db.Date
+  departureDate DateTime        @db.Date
   totalSeats    Int
   available     Int
-  locked        Int      @default(0)
-  booked        Int      @default(0)
-  status        String   @default("ACTIVE")
-  version       Int      @default(0)
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
-
-  seats SeatInventory[]
+  locked        Int             @default(0)
+  booked        Int             @default(0)
+  status        String          @default("ACTIVE")
+  version       Int             @default(0)
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  seats         SeatInventory[]
 
   @@index([trainId])
   @@index([scheduleId, status])
@@ -38,23 +30,22 @@ model ScheduleInventory {
 }
 
 model SeatInventory {
-  id                  String     @id @default(uuid())
+  id                  String            @id @default(uuid())
   scheduleInventoryId String
   scheduleId          String
   seatId              String
   seatNumber          Int
   seatType            String
   price               Float
-  status              SeatStatus @default(AVAILABLE)
+  status              SeatStatus        @default(AVAILABLE)
   lockedBy            String?
   lockedAt            DateTime?
-  lockExpiresAt        DateTime?
+  lockExpiresAt       DateTime?
   bookingId           String?
-  version             Int        @default(0)
-  createdAt           DateTime   @default(now())
-  updatedAt           DateTime   @updatedAt
-
-  scheduleInventory ScheduleInventory @relation(fields: [scheduleInventoryId], references: [id], onDelete: Cascade)
+  version             Int               @default(0)
+  createdAt           DateTime          @default(now())
+  updatedAt           DateTime          @updatedAt
+  scheduleInventory   ScheduleInventory @relation(fields: [scheduleInventoryId], references: [id], onDelete: Cascade)
 
   @@unique([scheduleId, seatId])
   @@unique([scheduleId, seatNumber])
@@ -107,4 +98,11 @@ model IdempotencyRecord {
 
   @@index([eventKey])
   @@map("idempotency_records")
+}
+
+enum SeatStatus {
+  AVAILABLE
+  LOCKED
+  BOOKED
+  CANCELLED
 }

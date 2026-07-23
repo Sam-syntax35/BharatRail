@@ -1,8 +1,5 @@
 const dotenv = require('dotenv');
-
-if (!process.env.ADMIN_DATABASE_URL) {
-  dotenv.config();
-}
+dotenv.config();
 
 const { Client } = require('pg');
 const inventoryService = require('./services/inventory.service');
@@ -14,8 +11,9 @@ async function main() {
   console.log('--- STARTING INVENTORY SYNCHRONIZATION ---');
 
   // Connect to admin database
+  const adminDbUrl = process.env.ADMIN_DATABASE_URL || 'postgres://admin:irctcpass@localhost:5432/admin_service_database';
   const adminClient = new Client({
-    connectionString: process.env.ADMIN_DATABASE_URL,
+    connectionString: adminDbUrl,
   });
   await adminClient.connect();
 

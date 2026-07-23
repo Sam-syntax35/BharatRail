@@ -1,6 +1,4 @@
 const path = require('path');
-
-const path = require('path');
 const dotenv = require('dotenv');
 
 if (!process.env.DATABASE_URL) {

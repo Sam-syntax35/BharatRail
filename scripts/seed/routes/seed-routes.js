@@ -1,5 +1,4 @@
 const path = require('path');
-const path = require('path');
 const dotenv = require('dotenv');
 
 if (!process.env.DATABASE_URL) {
@@ -9,7 +8,6 @@ if (!process.env.DATABASE_URL) {
 }
 
 const prisma = require('../../../admin-service/src/config/prisma');
-const { createRoute } = require('../../../admin-service/src/services/train.service');
 const corridors = require('./corridors.json');
 
 function minutesToHHMM(m) {
@@ -21,34 +19,37 @@ function minutesToHHMM(m) {
 
 function generateTimings(numStops) {
   const times = [];
-  let currentMinutes = 480; // Start at 08:00 AM
+  let currentMinutes = 480; // 08:00 AM
 
   for (let i = 0; i < numStops; i++) {
     if (i === 0) {
       times.push({
         arrivalTime: null,
-        departureTime: minutesToHHMM(currentMinutes)
+        departureTime: minutesToHHMM(currentMinutes),
       });
     } else {
-      const travelTime = 90 + Math.floor(Math.random() * 60); // 1.5 - 2.5 hours travel
+      const travelTime = 90 + Math.floor(Math.random() * 60);
       const arrival = currentMinutes + travelTime;
 
       if (i === numStops - 1) {
         times.push({
           arrivalTime: minutesToHHMM(arrival),
-          departureTime: null
+          departureTime: null,
         });
       } else {
-        const layover = 5 + Math.floor(Math.random() * 10); // 5 - 15 mins layover
+        const layover = 5 + Math.floor(Math.random() * 10);
         const departure = arrival + layover;
+
         times.push({
           arrivalTime: minutesToHHMM(arrival),
-          departureTime: minutesToHHMM(departure)
+          departureTime: minutesToHHMM(departure),
         });
+
         currentMinutes = departure;
       }
     }
   }
+
   return times;
 }
 
@@ -56,41 +57,42 @@ async function seedRoutes() {
   console.log('--- STARTING ROUTE SEEDER ---');
 
   if (!Array.isArray(corridors) || corridors.length === 0) {
-    console.error('❌ Failed: Corridor dataset is empty or invalid.');
-    process.exit(1);
+    throw new Error('Corridor dataset is empty or invalid.');
   }
 
   console.log(`✔ Loaded ${corridors.length} corridors.`);
 
-  // 1. Fetch all trains and stations
   const trains = await prisma.train.findMany();
   const dbStations = await prisma.station.findMany();
 
   if (trains.length === 0) {
-    console.error('❌ Failed: No trains found in database. Seed trains first.');
-    process.exit(1);
+    throw new Error('No trains found. Seed trains first.');
   }
+
   if (dbStations.length === 0) {
-    console.error('❌ Failed: No stations found in database. Seed stations first.');
-    process.exit(1);
+    throw new Error('No stations found. Seed stations first.');
   }
 
   console.log(`✔ Mapped ${trains.length} trains.`);
 
-  // Create a map from code to stationId
   const stationMap = new Map();
-  dbStations.forEach(s => stationMap.set(s.code, s.id));
+  dbStations.forEach((station) => {
+    stationMap.set(station.code, station.id);
+  });
 
   let createdRoutes = 0;
   let skippedExistingRoutes = 0;
-  let publishedRouteEvents = 0;
+  let skippedInvalidCorridors = 0;
 
   for (let idx = 0; idx < trains.length; idx++) {
     const train = trains[idx];
+    const corridor = corridors[idx % corridors.length];
 
-    // Check if train already has a route
+    // Skip if this train already has a route
     const existingRoute = await prisma.route.findUnique({
-      where: { trainId: train.id }
+      where: {
+        trainId: train.id,
+      },
     });
 
     if (existingRoute) {
@@ -98,28 +100,26 @@ async function seedRoutes() {
       continue;
     }
 
-    // Assign train to a corridor round-robin
-    const corridor = corridors[idx % corridors.length];
-
-    // Convert corridor station codes to station IDs
     const stationsPayload = [];
+    const timings = generateTimings(corridor.stations.length);
+
+    let currentDistance = 0;
     let validCorridor = true;
 
-    const timings = generateTimings(corridor.stations.length);
-    let currentDistance = 0;
-
     for (let sIdx = 0; sIdx < corridor.stations.length; sIdx++) {
-      const code = corridor.stations[sIdx];
-      const stationId = stationMap.get(code);
+      const stationCode = corridor.stations[sIdx];
+      const stationId = stationMap.get(stationCode);
 
       if (!stationId) {
-        console.warn(`⚠️ Skipped train ${train.trainNumber}: Corridor "${corridor.corridorName}" references missing station code "${code}".`);
+        console.warn(
+          `⚠️ Missing station "${stationCode}" for corridor "${corridor.corridorName}". Skipping train ${train.trainNumber}.`
+        );
         validCorridor = false;
         break;
       }
 
       if (sIdx > 0) {
-        currentDistance += 80 + Math.floor(Math.random() * 120); // 80 - 200 km gap
+        currentDistance += 80 + Math.floor(Math.random() * 120);
       }
 
       stationsPayload.push({
@@ -127,40 +127,50 @@ async function seedRoutes() {
         sequenceNumber: sIdx + 1,
         arrivalTime: timings[sIdx].arrivalTime,
         departureTime: timings[sIdx].departureTime,
-        distanceFromOrigin: currentDistance
+        distanceFromOrigin: currentDistance,
       });
     }
 
     if (!validCorridor) {
+      skippedInvalidCorridors++;
       continue;
     }
 
     try {
-      // 2. Insert route using the application's existing route creation service
-      await createRoute({
-        trainId: train.id,
-        stations: stationsPayload
+      await prisma.route.create({
+        data: {
+          trainId: train.id,
+          routeStations: {
+            create: stationsPayload,
+          },
+        },
       });
 
       createdRoutes++;
-      publishedRouteEvents++;
     } catch (err) {
-      console.error(`❌ Error creating route for train ${train.trainNumber}:`, err.message);
+      console.log("\n==========================");
+      console.log("Train:", train.trainNumber);
+      console.log("Corridor:", corridor.corridorName);
+      console.dir(err, { depth: null });
+      console.log("==========================\n");
+
+      if (err.code === "P2002") {
+        skippedExistingRoutes++;
+      }
     }
   }
 
-  console.log('✔ Loaded corridors');
-  console.log(`✔ Mapped trains: ${trains.length}`);
-  console.log(`✔ Created routes: ${createdRoutes}`);
-  console.log(`✔ Skipped existing routes: ${skippedExistingRoutes}`);
-  console.log(`✔ Published route events: ${publishedRouteEvents}`);
-  console.log('✔ Completed successfully');
+  console.log('✔ Route seeding completed');
+  console.log(`✔ Total trains: ${trains.length}`);
+  console.log(`✔ Routes created: ${createdRoutes}`);
+  console.log(`✔ Existing routes skipped: ${skippedExistingRoutes}`);
+  console.log(`✔ Invalid corridors skipped: ${skippedInvalidCorridors}`);
 }
 
 if (require.main === module) {
   seedRoutes()
     .catch((err) => {
-      console.error('❌ Seeding process encountered a fatal error:', err);
+      console.error('❌ Route seeding failed:', err);
       process.exit(1);
     })
     .finally(async () => {
