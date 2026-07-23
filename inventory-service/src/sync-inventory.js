@@ -8,7 +8,7 @@ async function main() {
 
   // Connect to admin database
   const adminClient = new Client({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: process.env.ADMIN_DATABASE_URL,
   });
   await adminClient.connect();
 
