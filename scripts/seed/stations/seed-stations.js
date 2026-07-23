@@ -1,5 +1,13 @@
 const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '../../../admin-service/.env') });
+
+const path = require('path');
+const dotenv = require('dotenv');
+
+if (!process.env.DATABASE_URL) {
+  dotenv.config({
+    path: path.resolve(__dirname, '../../../admin-service/.env'),
+  });
+}
 const prisma = require('../../../admin-service/src/config/prisma');
 const stations = require('./stations.json');
 
@@ -64,9 +72,9 @@ async function seedStations() {
 
       if (existing) {
         // Check if anything has changed to decide if we should update or treat it as a no-op
-        const needsUpdate = 
-          existing.name !== cleanName || 
-          existing.city !== cleanCity || 
+        const needsUpdate =
+          existing.name !== cleanName ||
+          existing.city !== cleanCity ||
           existing.state !== cleanState;
 
         if (needsUpdate) {

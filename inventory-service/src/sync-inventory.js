@@ -1,7 +1,14 @@
-require('dotenv').config();
+const dotenv = require('dotenv');
+
+if (!process.env.ADMIN_DATABASE_URL) {
+  dotenv.config();
+}
+
 const { Client } = require('pg');
 const inventoryService = require('./services/inventory.service');
 const inventoryPrisma = require('./config/prisma');
+
+
 
 async function main() {
   console.log('--- STARTING INVENTORY SYNCHRONIZATION ---');

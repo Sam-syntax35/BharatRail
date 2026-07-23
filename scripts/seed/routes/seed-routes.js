@@ -1,5 +1,12 @@
 const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '../../../admin-service/.env') });
+const path = require('path');
+const dotenv = require('dotenv');
+
+if (!process.env.DATABASE_URL) {
+  dotenv.config({
+    path: path.resolve(__dirname, '../../../admin-service/.env'),
+  });
+}
 
 const prisma = require('../../../admin-service/src/config/prisma');
 const { createRoute } = require('../../../admin-service/src/services/train.service');
@@ -15,7 +22,7 @@ function minutesToHHMM(m) {
 function generateTimings(numStops) {
   const times = [];
   let currentMinutes = 480; // Start at 08:00 AM
-  
+
   for (let i = 0; i < numStops; i++) {
     if (i === 0) {
       times.push({
@@ -25,7 +32,7 @@ function generateTimings(numStops) {
     } else {
       const travelTime = 90 + Math.floor(Math.random() * 60); // 1.5 - 2.5 hours travel
       const arrival = currentMinutes + travelTime;
-      
+
       if (i === numStops - 1) {
         times.push({
           arrivalTime: minutesToHHMM(arrival),
@@ -93,7 +100,7 @@ async function seedRoutes() {
 
     // Assign train to a corridor round-robin
     const corridor = corridors[idx % corridors.length];
-    
+
     // Convert corridor station codes to station IDs
     const stationsPayload = [];
     let validCorridor = true;

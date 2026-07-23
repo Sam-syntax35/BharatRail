@@ -1,5 +1,12 @@
 const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '../../../admin-service/.env') });
+const path = require('path');
+const dotenv = require('dotenv');
+
+if (!process.env.DATABASE_URL) {
+  dotenv.config({
+    path: path.resolve(__dirname, '../../../admin-service/.env'),
+  });
+}
 
 const prisma = require('../../../admin-service/src/config/prisma');
 
@@ -15,7 +22,7 @@ async function seedSchedules() {
 
   // 1. Determine days duration from argument or environment variable
   let days = 30;
-  
+
   // Parse command line arguments like --days=90
   const args = process.argv.slice(2);
   const daysArg = args.find(arg => arg.startsWith('--days='));

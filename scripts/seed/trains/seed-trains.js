@@ -1,5 +1,13 @@
 const path = require('path');
-require('dotenv').config({ path: path.resolve(__dirname, '../../../admin-service/.env') });
+
+const path = require('path');
+const dotenv = require('dotenv');
+
+if (!process.env.DATABASE_URL) {
+  dotenv.config({
+    path: path.resolve(__dirname, '../../../admin-service/.env'),
+  });
+}
 const prisma = require('../../../admin-service/src/config/prisma');
 const trains = require('./trains.json');
 
@@ -66,9 +74,9 @@ async function seedTrains() {
       let trainAction = 'none';
 
       if (existingTrain) {
-        const needsUpdate = 
-          existingTrain.trainName !== cleanName || 
-          existingTrain.coachName !== cleanCoach || 
+        const needsUpdate =
+          existingTrain.trainName !== cleanName ||
+          existingTrain.coachName !== cleanCoach ||
           existingTrain.totalSeats !== totalSeats;
 
         if (needsUpdate) {
