@@ -8,7 +8,7 @@ async function main() {
 
   // Connect to admin database
   const adminClient = new Client({
-    connectionString: 'postgres://admin:irctcpass@localhost:5432/admin_service_database',
+    connectionString: process.env.DATABASE_URL,
   });
   await adminClient.connect();
 
