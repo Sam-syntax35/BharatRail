@@ -43,11 +43,14 @@ app.get('/health', async (req, res) => {
      }
 
      const redisHealthy = RedisClient.isReady();
-     const healthy = dbHealthy && redisHealthy;
 
-     res.status(healthy ? 200 : 503).json({
-          success: healthy,
-          message: healthy ? 'Booking Service is healthy' : 'Booking Service is degraded',
+     // Resilient health status: return 200 if DB is healthy (even if Redis is reconnecting)
+     // to prevent Render from killing the container during transient Redis reconnects.
+     const status = dbHealthy ? 200 : 503;
+
+     res.status(status).json({
+          success: dbHealthy,
+          message: dbHealthy ? 'Booking Service is healthy' : 'Booking Service is degraded',
           redis: redisHealthy,
           database: dbHealthy,
           timestamp: new Date().toISOString(),
