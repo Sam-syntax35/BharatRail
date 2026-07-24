@@ -23,7 +23,10 @@ async function main() {
     execSync('node src/sync-es.js', {
       cwd: path.resolve(__dirname, '../../admin-service'),
       stdio: 'inherit',
-      env: { ...process.env, DATABASE_URL: undefined }
+      env: { 
+        ...process.env, 
+        DATABASE_URL: process.env.DATABASE_URL || undefined 
+      }
     });
     console.log('✅ Elasticsearch synchronization completed.');
 
@@ -31,7 +34,11 @@ async function main() {
     execSync('node src/sync-inventory.js', {
       cwd: path.resolve(__dirname, '../../inventory-service'),
       stdio: 'inherit',
-      env: { ...process.env, DATABASE_URL: undefined }
+      env: { 
+        ...process.env, 
+        DATABASE_URL: process.env.INVENTORY_DATABASE_URL || undefined,
+        ADMIN_DATABASE_URL: process.env.DATABASE_URL || process.env.ADMIN_DATABASE_URL || undefined
+      }
     });
     console.log('✅ Inventory synchronization completed.');
     console.log('\n🎉 All synchronization completed successfully.');
