@@ -4,7 +4,7 @@
   "description": "Booking orchestration service with saga pattern and distributed locking",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "npx prisma migrate deploy && node src/index.js",
     "dev": "nodemon src/index.js",
     "generate": "prisma generate",
     "migrate": "prisma migrate deploy"
